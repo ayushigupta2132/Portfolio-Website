@@ -8,7 +8,7 @@
 body {
   display: flex;
   min-height: 100vh;
-  background: #eae7e7;
+  background:white;
   color: #181717;
 }
 
@@ -19,17 +19,12 @@ body {
 
 .sidebar {
   width: 280px;
-  background: #fff;
+  background:rgb(247, 247, 247);
   padding: 20px;
   border-right: 2px solid #f1c40f;
 }
 
-.profile img {
-  width: 100px;
-  border-radius: 50%;
-  display: block;
-  margin: 0 auto 10px;
-}
+
 
 .profile h2 {
   text-align: center;
@@ -97,31 +92,96 @@ header .highlight {
   transition: 0.3s;
 }
 
-.services {
-  margin-bottom: 40px;
+.pricing {
+  text-align: center;
 }
 
-.service-cards {
+.box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #fff;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+  margin-bottom: 40px;
+  gap: 30px;
+}
+
+.text {
+  flex: 1;
+  font-size: 30px;
+}
+.text p{
+  font-size: 20px;
+}
+.highlight{
+  color:#f39c12;
+}
+
+.image img {
+  width: 200px;
+  height: auto;
+  background: transparent;
+}
+
+
+.services h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.service-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
   gap: 20px;
-  margin-top: 20px;
 }
 
 .card {
   background: #fff;
-  padding: 20px;
+  padding: 60px;
+  border-radius: 20px;
   text-align: center;
-  border: 1px solid #ddd;
-  border-radius: 10px;
-  transition: 0.3s;
+  font-weight: bold;
+  font-size: 18px;
+  border: 1px solid #eee;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  transition: 0.3s ease;
 }
 
+.card small {
+  display: block;
+  font-weight: normal;
+  color: #888;
+  margin-top: 5px;
+}
+.card img{
+  width: auto;
+  height: 100px;
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+}
 .card:hover {
-  border-color: #f39c12;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  border-color: orange;
+  box-shadow: 0 8px 20px rgba(255,165,0,0.2);
 }
 
-.pricing {
-  text-align: center;
+@media (max-width: 768px) {
+  .hero-box {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+
+  .image img {
+    margin-bottom: 20px;
+    width: 200px;
+    height: auto;
+  }
+
+  .service-grid{
+    grid-template-columns: 1fr;
+  }
 }
